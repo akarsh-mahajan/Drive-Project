@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+CLIENT_SECRETS_FILE = "client_secret.json"
+ASGI_APPLICATION = "DriveProject.asgi.application"
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
+    'rest_framework',
+    'channels'
 ]
 
 MIDDLEWARE = [

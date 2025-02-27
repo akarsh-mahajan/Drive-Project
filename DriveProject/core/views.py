@@ -4,7 +4,7 @@ from google_auth_oauthlib.flow import Flow
 from django.http import JsonResponse
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
-from ..DriveProject.settings import CLIENT_SECRETS_FILE
+from DriveProject.settings import CLIENT_SECRETS_FILE
 import os
 
 

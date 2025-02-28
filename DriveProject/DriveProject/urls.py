@@ -1,11 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from auth_app.views import google_login, google_callback
 
 urlpatterns = [
+    path('', include('auth_app.urls')),
     path('admin/', admin.site.urls),
-    path('auth/login/', google_login),
-    path('auth/callback/', google_callback),
-    # path('drive/', include('drive_app.urls')),
-    # path('chat/', include('chat_app.urls')),
+    path('auth/', include('auth_app.urls')),
+    path('drive/', include('drive_app.urls')),
 ]
